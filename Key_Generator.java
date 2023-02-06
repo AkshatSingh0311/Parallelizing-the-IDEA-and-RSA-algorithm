@@ -48,3 +48,16 @@ System.arraycopy(myList.get(i), 0, store[i], 0, myList.get(i).length);
 }
 for (int i = 0; i < 9; i++) { if (i != 8) {
 newList.add(new String[] {
+utilities.findInverse(store[8 - i][0]),
+utilities.findNegative(store[8 - i][1]), utilities.findNegative(store[8 - i][2]),
+utilities.findInverse(store[8 - i][3]), store[8 - i - 1][4], store[8 - i - 1][5] });
+} else {
+newList.add(
+new String[] { utilities.findInverse(store[8 - i][0]), utilities.findNegative(store[8 - i][1]),
+
+utilities.findNegative(store[8 - i][2]), utilities.findInverse(store[8 - i][3]), });
+}
+}
+return newList;
+}
+}
